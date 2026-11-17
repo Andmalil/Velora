@@ -1,0 +1,109 @@
+.header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5.5%;
+  border-bottom: 1px solid #edf0e9;
+  gap: 35px;
+}
+.nav {
+  display: flex;
+  gap: 29px;
+}
+.nav button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.nav button:hover {
+  color: #5b864b;
+}
+.nav .deals-link {
+  color: #58753d;
+}
+.deals-link span {
+  width: 5px;
+  height: 5px;
+  background: #93b367;
+  border-radius: 50%;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.header-divider {
+  height: 23px;
+  width: 1px;
+  background: #e7eae5;
+}
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  font-size: 12px;
+}
+.cart-button b {
+  display: grid;
+  place-items: center;
+  background: #edf1e8;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.mobile-toggle {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .nav {
+    gap: 16px;
+  }
+  .header {
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    height: 75px;
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: grid;
+  }
+  .nav.open {
+    display: flex;
+    position: absolute;
+    top: 109px;
+    left: 0;
+    right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 23px;
+    background: white;
+    z-index: 3;
+    box-shadow: 0 10px 20px #263e3110;
+  }
+}
+@media (max-width: 520px) {
+  .header {
+    padding: 0 5%;
+    gap: 15px;
+  }
+  .header-actions {
+    gap: 12px;
+  }
+  .search-shortcut,
+  .header-divider {
+    display: none;
+  }
+}

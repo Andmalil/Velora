@@ -1,0 +1,78 @@
+.cart-summary {
+  padding: 24px;
+}
+.cart-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.checkout-form {
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+.checkout-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  border: 1px solid #cbd2c4;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  background: #fff;
+}
+.checkout-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: 2px solid #637555;
+  outline-offset: 2px;
+}
+.checkout-form small {
+  line-height: 1.6;
+  color: #637555;
+}
+.service-notice {
+  padding: 16px 24px;
+  margin: 16px 3%;
+  background: #f0f4ea;
+  border-radius: 8px;
+}
+.service-notice button {
+  margin-left: 12px;
+  text-decoration: underline;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.cart-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+.cart-summary > small {
+  font-size: 10px;
+  color: #909b85;
+}
+.checkout-button {
+  width: 100%;
+  margin-top: 22px;
+}
+.checkout-note {
+  background: #f0f4ea;
+  padding: 16px;
+  font-size: 12px;
+  line-height: 1.7;
+  border-radius: 6px;
+  margin-top: 16px;
+  color: #637555;
+}

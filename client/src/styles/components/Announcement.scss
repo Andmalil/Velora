@@ -1,0 +1,36 @@
+.announcement {
+  height: 34px;
+  background: #234735;
+  color: #ecf1e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5.5%;
+  font-size: 11px;
+  letter-spacing: 0.25px;
+}
+.announcement > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.announcement-divider {
+  opacity: 0.35;
+  margin: 0 12px;
+}
+@media (max-width: 800px) {
+  .announcement > span:first-child {
+    display: none;
+  }
+  .announcement {
+    justify-content: center;
+  }
+}
+@media (max-width: 520px) {
+  .announcement {
+    font-size: 9px;
+  }
+  .announcement-divider {
+    margin: 0 3px;
+  }
+}

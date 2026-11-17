@@ -1,0 +1,58 @@
+@use "./variables" as theme;
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  padding: 5px;
+}
+.eyebrow {
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 1.75px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #64775f;
+}
+.eyebrow > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #74925a;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 550;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.primary {
+  background: theme.$green;
+  color: #fff;
+}
+.primary:hover {
+  background: #35694d;
+  transform: translateY(-1px);
+}
+.text-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: transparent;
+  font-size: 11px;
+  padding: 12px 0;
+}
+@media (max-width: 520px) {
+  .text-button {
+    font-size: 10px;
+    gap: 5px;
+  }
+}

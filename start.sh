@@ -1,0 +1,1 @@
+npx.cmd concurrently --kill-others --names "velora" "npm --prefix client/velora run dev" "go run ./server/cmd"

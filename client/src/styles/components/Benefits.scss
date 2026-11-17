@@ -1,0 +1,65 @@
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 5.5%;
+  padding: 29px 0;
+  border-bottom: 1px solid #e9ece5;
+  gap: 22px;
+}
+.benefits > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.benefits svg {
+  width: 23px;
+  color: #698363;
+  stroke-width: 1.4;
+}
+.benefits strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 550;
+}
+.benefits small {
+  display: block;
+  font-size: 10px;
+  color: #92988f;
+  margin-top: 5px;
+}
+@media (max-width: 1100px) {
+  .benefits {
+    gap: 12px;
+  }
+  .benefits strong {
+    font-size: 10px;
+  }
+  .benefits small {
+    font-size: 9px;
+  }
+}
+@media (max-width: 800px) {
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 24px 0;
+  }
+}
+@media (max-width: 520px) {
+  .benefits {
+    margin: 0 6%;
+    gap: 22px 14px;
+  }
+  .benefits > div {
+    gap: 10px;
+  }
+  .benefits strong {
+    font-size: 9px;
+  }
+  .benefits small {
+    font-size: 8px;
+  }
+  .benefits svg {
+    width: 20px;
+  }
+}

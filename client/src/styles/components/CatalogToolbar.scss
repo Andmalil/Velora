@@ -1,0 +1,92 @@
+@use "../variables" as theme;
+
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 21px;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #f7f8f5;
+  border: 1px solid #eef0ea;
+  border-radius: 5px;
+  padding: 11px 13px;
+  max-width: 310px;
+  flex: 1;
+  color: #9ba294;
+}
+.search-field input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 11px;
+  color: #384b3b;
+}
+.search-field:focus-within {
+  outline: 2px solid #90ba88;
+}
+.search-field input::placeholder {
+  color: #9ca396;
+}
+.deal-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #737c6c;
+  white-space: nowrap;
+}
+.deal-filter input {
+  accent-color: theme.$green;
+}
+.product-count {
+  font-size: 10px;
+  color: #9b9f96;
+  margin-left: auto;
+}
+.sort-field {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.sort-field > span {
+  color: #9a9f93;
+}
+.sort-field select {
+  border: 0;
+  appearance: none;
+  background: transparent;
+  padding: 8px 3px;
+  color: #53614d;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .catalog-toolbar {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .search-field {
+    max-width: none;
+    flex-basis: 55%;
+  }
+  .product-count {
+    margin-left: 0;
+  }
+  .sort-field {
+    margin-left: auto;
+  }
+}
+@media (max-width: 520px) {
+  .product-count {
+    font-size: 9px;
+  }
+  .deal-filter {
+    font-size: 9px;
+  }
+}

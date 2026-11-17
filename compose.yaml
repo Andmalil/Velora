@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-velora}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-velora_local_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-velora}
+    # The API connects to db:5432 inside Docker; no Windows port is required.
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+      - ./database/002_checkout.sql:/docker-entrypoint-initdb.d/002_checkout.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/003_seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  api:
+    build: ./server
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-velora}:${POSTGRES_PASSWORD:-velora_local_dev}@db:5432/${POSTGRES_DB:-velora}?sslmode=disable
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      GIN_MODE: release
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:8080"
+  web:
+    build: ./client
+    ports:
+      - "127.0.0.1:3000:80"
+    depends_on:
+      - api
+volumes:
+  pgdata:

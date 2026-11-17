@@ -1,0 +1,93 @@
+.setup-banner {
+  margin: 43px 5.5%;
+  padding: 30px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f1f4eb;
+  border: 1px solid #e7eddf;
+  border-radius: 8px;
+}
+.setup-icon {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  background: #e5ecdc;
+  border-radius: 50%;
+  color: #6e8859;
+  flex-shrink: 0;
+}
+.setup-banner .eyebrow {
+  font-size: 8px;
+}
+.setup-banner h2 {
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  margin: 7px 0;
+}
+.setup-banner p {
+  font-size: 10px;
+  color: #8a9680;
+}
+.setup-banner > .button {
+  margin-left: auto;
+  white-space: nowrap;
+}
+@media (max-width: 1100px) {
+  .setup-banner {
+    padding: 25px;
+    gap: 18px;
+  }
+  .setup-banner h2 {
+    font-size: 19px;
+  }
+  .setup-banner > .button {
+    padding: 14px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .setup-banner {
+    flex-wrap: wrap;
+  }
+  .setup-banner > .button {
+    margin-left: 88px;
+  }
+  .setup-banner p {
+    line-height: 1.7;
+  }
+}
+@media (max-width: 520px) {
+  .setup-banner {
+    margin: 30px 5%;
+    padding: 22px 19px;
+    gap: 14px;
+  }
+  .setup-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .setup-icon svg {
+    width: 25px;
+  }
+  .setup-banner > div:nth-child(2) {
+    flex: 1;
+  }
+  .setup-banner h2 {
+    font-size: 17px;
+  }
+  .setup-banner p {
+    font-size: 10px;
+  }
+  .setup-banner .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .setup-banner > .button {
+    margin: 0 0 0 58px;
+    white-space: normal;
+    text-align: left;
+    font-size: 10px;
+  }
+}
