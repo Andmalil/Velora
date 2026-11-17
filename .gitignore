@@ -1,6 +1,5 @@
 # Mac OS X files
 .DS_Store
-.vscode/
 
 # Binaries for programs and plugins
 *.exe
@@ -24,3 +23,12 @@
 tmp
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
