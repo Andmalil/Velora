@@ -1,6 +1,6 @@
 import { Star, ShoppingBag } from "lucide-react";
 import type { Product } from "../data/products";
-import ProductArt from "./ProductArt";
+import ProductPhoto from "./ProductPhoto";
 import { money } from "../utils/money";
 import type { ProductAction } from "../types/store";
 import Modal from "./Modal";
@@ -18,7 +18,7 @@ export default function ProductDetails({
   return (
     <Modal title="A closer look" onClose={() => onClose()}>
       <div className={`detail-art ${product.color}`}>
-        <ProductArt kind={product.kind} id="detail" />
+        <ProductPhoto product={product} />
       </div>
       <div className="detail-content">
         <span className="eyebrow">

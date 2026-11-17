@@ -41,7 +41,6 @@ export default function App() {
 
   return (
     <>
-      <Announcement />
       <Header
         browse={browse}
         count={cart.count}
@@ -87,7 +86,6 @@ export default function App() {
           onSelect={setSelected}
           onAdd={add}
         />
-        <SetupBanner browse={browse} />
       </main>
       <Footer />
       {toast.message && <Toast message={toast.message} />}

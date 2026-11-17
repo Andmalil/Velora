@@ -2,7 +2,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import type { Browse, ProductAction } from "../types/store";
 import type { Product } from "../data/products";
 import { money } from "../utils/money";
-import ProductArt from "./ProductArt";
+import ProductPhoto from "./ProductPhoto";
 interface HeroProps {
   browse: Browse;
   onSelect: ProductAction;
@@ -53,11 +53,9 @@ export default function Hero({ browse, onSelect, product }: HeroProps) {
         </div>
       </div>
       <div className="hero-visual">
-        <div className="orbit orbit-one" />
-        <div className="orbit orbit-two" />
-        <span className="hero-watermark">CREATE.</span>
+
         <div className="hero-art">
-          <ProductArt kind="laptop" id="hero" />
+          <ProductPhoto product={product} featured />
         </div>
         <div className="hero-float">
           <span className="float-icon">
@@ -79,12 +77,6 @@ export default function Hero({ browse, onSelect, product }: HeroProps) {
               <ArrowRight size={20} />
             </button>
           </div>
-        </div>
-        <div className="hero-pagination">
-          <span />
-          <i />
-          <i />
-          <small>01 — 03</small>
         </div>
       </div>
     </section>

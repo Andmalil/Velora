@@ -1,6 +1,6 @@
 import { Sparkles, ArrowRight, Star, Plus } from "lucide-react";
 import type { Product } from "../data/products";
-import ProductArt from "./ProductArt";
+import ProductPhoto from "./ProductPhoto";
 import { money } from "../utils/money";
 import type { ProductAction } from "../types/store";
 interface ProductCardProps {
@@ -29,7 +29,7 @@ export default function ProductCard({
             {product.badge}
           </span>
         )}
-        <ProductArt kind={product.kind} id={product.id} />
+        <ProductPhoto product={product} />
         <span className="quick-view">
           Take a closer look <ArrowRight size={14} />
         </span>

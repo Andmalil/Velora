@@ -8,6 +8,7 @@ export type Category =
 export type ProductKind =
   "laptop" | "desktop" | "gpu" | "monitor" | "keyboard" | "mouse";
 export interface Product {
+  imageUrl?: string | null;
   id: string;
   name: string;
   brand: string;

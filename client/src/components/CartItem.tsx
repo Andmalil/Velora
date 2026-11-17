@@ -1,6 +1,6 @@
 import { Minus, Plus } from "lucide-react";
 import type { Product } from "../data/products";
-import ProductArt from "./ProductArt";
+import ProductPhoto from "./ProductPhoto";
 import { money } from "../utils/money";
 
 interface CartItemProps {
@@ -19,7 +19,7 @@ export default function CartItem({
   return (
     <div className="cart-item">
       <div className={`cart-art ${product.color}`}>
-        <ProductArt kind={product.kind} id={`cart-${product.id}`} />
+        <ProductPhoto product={product} />
       </div>
       <div className="cart-item-content">
         <strong>{product.name}</strong>

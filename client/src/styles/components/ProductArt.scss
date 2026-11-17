@@ -11,6 +11,8 @@
   background: #f3f0e9;
 }
 .product-art {
+  object-fit: contain;
+  mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
   display: block;

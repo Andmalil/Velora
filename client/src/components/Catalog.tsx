@@ -39,17 +39,6 @@ export default function Catalog({
 }: CatalogProps) {
   return (
     <section className="catalog" ref={catalogRef} id="shop">
-      <div className="section-heading">
-        <div className="eyebrow">THE GOOD STUFF, ALL IN ONE PLACE</div>
-        <div className="heading-row">
-          <h2>
-            Find your next favorite<span>.</span>
-          </h2>
-          <span className="collection-note">
-            A little upgrade goes a long way.
-          </span>
-        </div>
-      </div>
       <CategoryTabs category={category} onChange={onCategoryChange} />
       <CatalogToolbar
         query={query}
